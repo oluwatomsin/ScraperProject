@@ -1,0 +1,7 @@
+beautifulsoup4
+streamlit
+pandas
+watchdog
+plotly
+scipy
+dash
