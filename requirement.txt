@@ -5,3 +5,4 @@ watchdog
 plotly
 scipy
 dash
+python-dotenv
