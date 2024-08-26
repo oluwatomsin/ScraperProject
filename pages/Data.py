@@ -1,10 +1,11 @@
 import streamlit as st
-import pandas as pd
+from utils.module import data_loader
 
 st.markdown("## Data Sourcing Page")
 st.write("This pages is where the data scraping happens, All we need is a button that load the data from a specific "
          "webpage")
 
-df = pd.read_csv('./data/crude-oil-prices-daily.csv', skiprows=9)
+
+df = data_loader()
 
 st.dataframe(df.head(5))
