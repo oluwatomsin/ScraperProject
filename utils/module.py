@@ -59,3 +59,4 @@ def fetch_latest_data():
         
     else:
         st.write(f"Failed to retrieve the webpage. Status code: {response.status_code}")
+
