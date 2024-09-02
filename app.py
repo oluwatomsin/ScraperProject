@@ -7,7 +7,7 @@ st.write("For information about getting data, head over to the data page in the 
          "all features in this demo will be present in the final application.")
 
 pg = st. navigation([
-    st.Page('./pages/Data.py', title='Data', icon=":material/favorite:"),
-    st.Page('./pages/Analytics.py', title='Analytics', icon=":material/favorite:")
+    st.Page('tabs/Data.py', title='Data', icon=":material/favorite:"),
+    st.Page('tabs/Analytics.py', title='Analytics', icon=":material/favorite:")
 ])
 pg.run()
