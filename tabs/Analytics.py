@@ -54,11 +54,36 @@ def display_bar(df=data_2):
 
     # Update layout
     fig.update_layout(
-        title="Commodity Prices and Percentage Changes",
+        title="Commodity Prices and Change in price",
         height=1000,  # Adjust height as needed
-        width=2500  # Set the desired width
+        width=3500  # Set the desired width
 
     )
+
+    # Add titles to each subplot
+    fig.update_yaxes(title_text="Last Price of Commodity", row=1, col=1)
+    fig.update_yaxes(title_text="% Change in Price of Commodity", row=2, col=1)
+
+    # Add curved borders using shapes (rounded rectangles)
+    fig.add_shape(
+        type="rect",
+        x0=-0.5, y0=0.5, x1=25, y1=100,  # Adjust coordinates as needed
+        xref="x", yref="y1",
+        line=dict(color="RoyalBlue", width=2),
+        fillcolor="LightSkyBlue",
+        opacity=0.3,
+        layer="below"
+    )
+    fig.add_shape(
+        type="rect",
+        x0=-0.5, y0=-2.5, x1=25, y1=3,  # Adjust coordinates as needed
+        xref="x", yref="y2",
+        line=dict(color="RoyalBlue", width=2),
+        fillcolor="LightSkyBlue",
+        opacity=0.3,
+        layer="below"
+    )
+
     st.plotly_chart(fig)
 
 
